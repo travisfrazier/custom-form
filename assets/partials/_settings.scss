@@ -1,12 +1,15 @@
+//These fonts pair well together, I searched Google font's for popular pairing and pikced what I liked together
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Raleway:wght@600;700&display=swap');
 
+//I like my fonts to be in SASS variables 
 $font-primary: 'Quicksand', sans-serif;
 $font-secondary: 'Raleway', sans-serif;
 
+//Color combination of dark nd light purple/blue - complimentary colors mainly used on the linear gradient for the background
 $color-black: #0a0a0a;
 $color-primary: #651b7f;
 $color-primary-acc: #737ac0;
 $color-secondary: #2596be;
 $color-secondary-acc: #125e9e;
-$color-white: #FFFFFF;
+$color-white: #ffffff;
 $color-overlay: #7379c079;

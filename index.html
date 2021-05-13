@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Choices JS Select CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
+    <!-- Pretty Checkbox CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretty-checkbox@3.0/dist/pretty-checkbox.min.css" />
     <link rel="stylesheet" href="./assets/main.css">
     <title>eSalon Profile Form</title>
 </head>
@@ -124,20 +126,29 @@
                     </div>
                     <div class="c-form__group">
                         <label class="c-form__label">Gender:</label><br>
-                        <input class="c-form__radio" type="radio" id="male" name="gender" value="male">
-                        <label class="c-form__radio--label" for="male">Male</label>
-                        <input class="c-form__radio" type="radio" id="female" name="gender" value="female">
-                        <label class="c-form__radio--label" for="female">Female</label>
-                        <input class="c-form__radio" type="radio" id="other" name="gender" value="other">
-                        <label class="c-form__radio--label" for="other">Other</label>
+                        <div class="pretty p-default p-round">
+                            <input type="radio" name="radio1" required>
+                            <div class="state c-form__radio">
+                                <label>Male</label>
+                            </div>
+                        </div>
+                        <div class="pretty p-default p-round">
+                            <input type="radio" name="radio1" required>
+                            <div class="state c-form__radio">
+                                <label>Female</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="c-form__group c-form__checkbox">
-                    <span class="c-form__label">Marketing Consent</span>
+                    <span class="c-form__label">Marketing Consent:</span>
                     <div class="c-form__group--checkbox">
-                        <label class="c-form__label c-form__label--checkbox" for="marketing">I agree:</label>
-                        <input class="c-form__input c-form__input--checkbox" id="marketing" name="marketing"
-                            type="checkbox" required>
+                        <div class="pretty p-switch p-fill">
+                            <input id="marketing" name="marketing" type="checkbox" required />
+                            <div class="state c-form__switch p-success">
+                                <label for="marketing">I agree</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
