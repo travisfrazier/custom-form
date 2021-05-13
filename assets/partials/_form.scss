@@ -1,0 +1,82 @@
+.c-form {
+  width: 100%;
+  background: $color-white;
+  height: 80%;
+  padding: 3rem;
+  position: relative;
+  @media only screen and (max-width: 900px) {
+    height: 100%;
+    padding-bottom: 6rem;
+  }
+}
+.c-form__input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid $color-black;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: $font-primay;
+  margin-bottom: 1rem;
+}
+.c-form__input:focus {
+  &:focus {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid $color-primary;
+  }
+}
+.c-form__select {
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-bottom: 1px solid $color-black;
+  font-family: $font-primay;
+}
+.c-form__label {
+  font-family: $font-primay;
+  font-size: 1.8rem;
+}
+.c-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+.c-form__button {
+  background: $color-secondary-acc;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 8rem;
+  font-size: 1.8rem;
+  color: $color-white;
+  margin-top: 1rem;
+  font-family: $font-primay;
+  cursor: pointer;
+  //width: 100%;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+
+  &:hover {
+    background: $color-secondary;
+  }
+}
+.c-form__radio--label {
+    font-size: 1.4rem;
+}
+.c-form__group__checkbox {
+  display: flex;
+  align-items: center;
+}
+.c-form__input--checkbox {
+  width: auto;
+}
+.c-form__label--checkbox {
+  font-size: 1.2rem;
+}

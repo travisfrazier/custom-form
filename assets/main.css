@@ -1,0 +1,255 @@
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&family=Raleway:wght@600;700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(217deg, #651b7f, #737ac0 70.71%), linear-gradient(127deg, #2596be, #125e9e 70.71%);
+}
+
+.c-container {
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 8rem 2rem 0rem 2rem;
+  max-width: 1000px;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 4rem 2rem 4rem 2rem;
+  }
+}
+
+.c-box {
+  background-image: url("./images/palms.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 675px;
+  text-align: left;
+  padding-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-box {
+    height: 225px;
+  }
+}
+
+.c-box__overlay {
+  position: absolute;
+  bottom: 0;
+  background: #7379c079;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.c-box__title {
+  font-size: 5rem;
+  color: #FFFFFF;
+  font-weight: 400;
+  padding-left: 3rem;
+  width: 50%;
+  z-index: 3;
+  position: absolute;
+  font-family: "Raleway", sans-serif;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-box__title {
+    width: 100%;
+  }
+}
+
+.c-form {
+  width: 100%;
+  background: #FFFFFF;
+  height: 80%;
+  padding: 3rem;
+  position: relative;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-form {
+    height: 100%;
+    padding-bottom: 6rem;
+  }
+}
+
+.c-form__input {
+  border: none;
+  background: none;
+  border-bottom: 1px solid #0a0a0a;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  font-size: 1.6rem;
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.c-form__input:focus:focus {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #651b7f;
+}
+
+.c-form__select {
+  font-size: 1.6rem;
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  border-bottom: 1px solid #0a0a0a;
+  font-family: "Quicksand", sans-serif;
+}
+
+.c-form__label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.8rem;
+}
+
+.c-form__row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .c-form__row {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.c-form__button {
+  background: #125e9e;
+  border: none;
+  border-radius: 10px;
+  padding: 1rem 8rem;
+  font-size: 1.8rem;
+  color: #FFFFFF;
+  margin-top: 1rem;
+  font-family: "Quicksand", sans-serif;
+  cursor: pointer;
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.c-form__button:hover {
+  background: #2596be;
+}
+
+.c-form__radio--label {
+  font-size: 1.4rem;
+}
+
+.c-form__group__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-form__input--checkbox {
+  width: auto;
+}
+
+.c-form__label--checkbox {
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=main.css.map */
