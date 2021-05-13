@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Choices JS Select CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css" />
     <link rel="stylesheet" href="./assets/main.css">
     <title>eSalon Profile Form</title>
 </head>
@@ -16,134 +18,137 @@
             <h1 class="c-box__title">eSalon Profile Creation</h1>
         </div>
         <form class="c-form">
-            <div class="c-form__row">
-                <div class="c-form__group">
-                    <label class="c-form__label" for="firstname">First Name:</label><br>
-                    <input class="c-form__input" id="firstname" type="text" name="firstname" required />
+            <div class="c-form__content">
+                <div class="c-form__row">
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="firstname">First Name:</label><br>
+                        <input class="c-form__input" id="firstname" type="text" name="firstname" required />
+                    </div>
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="lastname">Last Name:</label><br>
+                        <input class="c-form__input" id="lastname" type="text" name="lastname" required />
+                    </div>
                 </div>
-                <div class="c-form__group">
-                    <label class="c-form__label" for="lastname">Last Name:</label><br>
-                    <input class="c-form__input" id="lastname" type="text" name="lastname" required />
+                <div class="c-form__row">
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="email">Email:</label><br>
+                        <input class="c-form__input" id="email" type="email" name="email" required />
+                    </div>
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="phone">Phone Number:</label><br>
+                        <input placeholder="XXX-XXX-XXXX" class="c-form__input" type="tel" id="phone" name="phone"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div>
                 </div>
-            </div>
-            <div class="c-form__row">
-                <div class="c-form__group">
-                    <label class="c-form__label" for="email">Email:</label><br>
-                    <input class="c-form__input" id="email" type="email" name="email" required />
+                <div class="c-form__row">
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="address">Address:</label><br>
+                        <input class="c-form__input" id="address" type="text" name="address" required />
+                    </div>
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="city">City:</label><br>
+                        <input class="c-form__input" id="city" type="text" name="city" required />
+                    </div>
                 </div>
-                <div class="c-form__group">
-                    <label class="c-form__label" for="phone">Phone Number:</label><br>
-                    <input placeholder="XXX-XXX-XXXX" class="c-form__input" type="tel" id="phone" name="phone"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                <div class="c-form__row">
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="state">State:</label><br>
+                        <select class="c-form__select" id="state" name="state" required>
+                            <option disabled selected value="---">---</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Alaska">Alaska</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="District of Columbia">District of Columbia</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Guam">Guam</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Montana">Montana</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="New York">New York</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Northern Marianas Islands">Northern Marianas Islands</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Virgin Islands">Virgin Islands</option>
+                            <option value="Washington">Washington</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="zip">Zip Code:</label><br>
+                        <input class="c-form__input" id="zip" name="zip" type="text" pattern="[0-9]*" required>
+                    </div>
                 </div>
-            </div>
-            <div class="c-form__row">
-                <div class="c-form__group">
-                    <label class="c-form__label" for="address">Address:</label><br>
-                    <input class="c-form__input" id="address" type="text" name="address" required />
+                <div class="c-form__row">
+                    <div class="c-form__group">
+                        <label class="c-form__label" for="file">Profile Photo:</label><br>
+                        <input type="file" id="file" name="file">
+                    </div>
+                    <div class="c-form__group">
+                        <label class="c-form__label">Gender:</label><br>
+                        <input class="c-form__radio" type="radio" id="male" name="gender" value="male">
+                        <label class="c-form__radio--label" for="male">Male</label>
+                        <input class="c-form__radio" type="radio" id="female" name="gender" value="female">
+                        <label class="c-form__radio--label" for="female">Female</label>
+                        <input class="c-form__radio" type="radio" id="other" name="gender" value="other">
+                        <label class="c-form__radio--label" for="other">Other</label>
+                    </div>
                 </div>
-                <div class="c-form__group">
-                    <label class="c-form__label" for="city">City:</label><br>
-                    <input class="c-form__input" id="city" type="text" name="city" required />
-                </div>
-            </div>
-            <div class="c-form__row">
-                <div class="c-form__group">
-                    <label class="c-form__label" for="state">State:</label><br>
-                    <select class="c-form__select" id="state" name="state">
-                        <option value="---">---</option>
-                        <option value="Alabama">Alabama</option>
-                        <option value="Alaska">Alaska</option>
-                        <option value="Arizona">Arizona</option>
-                        <option value="Arkansas">Arkansas</option>
-                        <option value="California">California</option>
-                        <option value="Colorado">Colorado</option>
-                        <option value="Connecticut">Connecticut</option>
-                        <option value="Delaware">Delaware</option>
-                        <option value="District of Columbia">District of Columbia</option>
-                        <option value="Florida">Florida</option>
-                        <option value="Georgia">Georgia</option>
-                        <option value="Guam">Guam</option>
-                        <option value="Hawaii">Hawaii</option>
-                        <option value="Idaho">Idaho</option>
-                        <option value="Illinois">Illinois</option>
-                        <option value="Indiana">Indiana</option>
-                        <option value="Iowa">Iowa</option>
-                        <option value="Kansas">Kansas</option>
-                        <option value="Kentucky">Kentucky</option>
-                        <option value="Louisiana">Louisiana</option>
-                        <option value="Maine">Maine</option>
-                        <option value="Maryland">Maryland</option>
-                        <option value="Massachusetts">Massachusetts</option>
-                        <option value="Michigan">Michigan</option>
-                        <option value="Minnesota">Minnesota</option>
-                        <option value="Mississippi">Mississippi</option>
-                        <option value="Missouri">Missouri</option>
-                        <option value="Montana">Montana</option>
-                        <option value="Nebraska">Nebraska</option>
-                        <option value="Nevada">Nevada</option>
-                        <option value="New Hampshire">New Hampshire</option>
-                        <option value="New Jersey">New Jersey</option>
-                        <option value="New Mexico">New Mexico</option>
-                        <option value="New York">New York</option>
-                        <option value="North Carolina">North Carolina</option>
-                        <option value="North Dakota">North Dakota</option>
-                        <option value="Northern Marianas Islands">Northern Marianas Islands</option>
-                        <option value="Ohio">Ohio</option>
-                        <option value="Oklahoma">Oklahoma</option>
-                        <option value="Oregon">Oregon</option>
-                        <option value="Pennsylvania">Pennsylvania</option>
-                        <option value="Puerto Rico">Puerto Rico</option>
-                        <option value="Rhode Island">Rhode Island</option>
-                        <option value="South Carolina">South Carolina</option>
-                        <option value="South Dakota">South Dakota</option>
-                        <option value="Tennessee">Tennessee</option>
-                        <option value="Texas">Texas</option>
-                        <option value="Utah">Utah</option>
-                        <option value="Vermont">Vermont</option>
-                        <option value="Virginia">Virginia</option>
-                        <option value="Virgin Islands">Virgin Islands</option>
-                        <option value="Washington">Washington</option>
-                        <option value="West Virginia">West Virginia</option>
-                        <option value="Wisconsin">Wisconsin</option>
-                        <option value="Wyoming">Wyoming</option>
-                    </select>
-                </div>
-                <div class="c-form__group">
-                    <label class="c-form__label" for="zip">Zip Code:</label><br>
-                    <input class="c-form__input" id="zip" name="zip" type="text" pattern="[0-9]*">
-                </div>
-            </div>
-            <div class="c-form__row">
-                <div class="c-form__group">
-                    <label class="c-form__label" for="file">Profile Photo:</label><br>
-                    <input type="file" id="file" name="file">
-                </div>
-                <div class="c-form__group">
-                    <label class="c-form__label">Gender:</label><br>
-                    <input class="c-form__radio" type="radio" id="male" name="gender" value="male">
-                    <label class="c-form__radio--label" for="male">Male</label>
-                    <input class="c-form__radio" type="radio" id="female" name="gender" value="female">
-                    <label class="c-form__radio--label" for="female">Female</label>
-                    <input class="c-form__radio" type="radio" id="other" name="gender" value="other">
-                    <label class="c-form__radio--label" for="other">Other</label>
-                </div>
-            </div>
-            <div class="c-form__row">
-                <div class="c-form__group">
-                    <p class="c-form__label">Marketing Consent:</p>
+                <div class="c-form__group c-form__checkbox">
+                    <span class="c-form__label">Marketing Consent</span>
                     <div class="c-form__group--checkbox">
                         <label class="c-form__label c-form__label--checkbox" for="marketing">I agree:</label>
                         <input class="c-form__input c-form__input--checkbox" id="marketing" name="marketing"
                             type="checkbox" required>
                     </div>
                 </div>
-                <div class="c-form__group">
-                    <button class="c-form__button" type="submit">Submit</button>
-                </div>
+            </div>
+            <div class="c-form__actions">
+                <button class="c-form__button" type="submit">Submit</button>
             </div>
         </form>
     </main>
+    <!-- Choices JS - Vanilla JS Select Library (lightweight and easy) -->
+    <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+    <script src="./assets/main.js"></script>
 </body>
 
 </html>

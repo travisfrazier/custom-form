@@ -1,13 +1,18 @@
 .c-form {
   width: 100%;
   background: $color-white;
-  height: 80%;
+  height: 85%;
   padding: 3rem;
   position: relative;
-  @media only screen and (max-width: 900px) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media only screen and (max-width: 768px) {
     height: 100%;
-    padding-bottom: 6rem;
   }
+}
+.c-form__content {
+  padding-bottom: 3rem;
 }
 .c-form__input {
   border: none;
@@ -16,7 +21,7 @@
   padding: 0.5rem 1rem;
   width: 100%;
   font-size: 1.6rem;
-  font-family: $font-primay;
+  font-family: $font-primary;
   margin-bottom: 1rem;
 }
 .c-form__input:focus {
@@ -31,11 +36,26 @@
   width: 100%;
   padding: 0.7rem;
   border: none;
+}
+.choices__inner {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  border: none;
   border-bottom: 1px solid $color-black;
-  font-family: $font-primay;
+  border-radius: 0px;
+  background: transparent;
+  min-height: auto;
+  padding-top: 0;
+  padding-bottom: 2.5px !important;
+}
+.choices__list--dropdown {
+  font-family: $font-primary;
+}
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 10px;
 }
 .c-form__label {
-  font-family: $font-primay;
+  font-family: $font-primary;
   font-size: 1.8rem;
 }
 .c-form__row {
@@ -43,7 +63,7 @@
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
   margin-bottom: 1rem;
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
@@ -56,27 +76,29 @@
   font-size: 1.8rem;
   color: $color-white;
   margin-top: 1rem;
-  font-family: $font-primay;
+  font-family: $font-primary;
   cursor: pointer;
-  //width: 100%;
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-
   &:hover {
     background: $color-secondary;
   }
 }
 .c-form__radio--label {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
-.c-form__group__checkbox {
+.c-form__group--checkbox {
   display: flex;
   align-items: center;
 }
+.c-form__checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .c-form__input--checkbox {
   width: auto;
+  margin: 0;
 }
 .c-form__label--checkbox {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin-right: 1rem;
 }

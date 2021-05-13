@@ -98,7 +98,7 @@ body {
   max-width: 1000px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
   .c-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -118,9 +118,9 @@ body {
   z-index: 1;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
   .c-box {
-    height: 225px;
+    height: 200px;
   }
 }
 
@@ -142,27 +142,42 @@ body {
   z-index: 3;
   position: absolute;
   font-family: "Raleway", sans-serif;
+  line-height: 130%;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
   .c-box__title {
     width: 100%;
+    font-size: 4rem;
   }
 }
 
 .c-form {
   width: 100%;
   background: #FFFFFF;
-  height: 80%;
+  height: 85%;
   padding: 3rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
   .c-form {
     height: 100%;
-    padding-bottom: 6rem;
   }
+}
+
+.c-form__content {
+  padding-bottom: 3rem;
 }
 
 .c-form__input {
@@ -187,8 +202,26 @@ body {
   width: 100%;
   padding: 0.7rem;
   border: none;
-  border-bottom: 1px solid #0a0a0a;
+}
+
+.choices__inner {
   font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 1px solid #0a0a0a;
+  border-radius: 0px;
+  background: transparent;
+  min-height: auto;
+  padding-top: 0;
+  padding-bottom: 2.5px !important;
+}
+
+.choices__list--dropdown {
+  font-family: "Quicksand", sans-serif;
+}
+
+.choices__list--dropdown .choices__item--selectable {
+  padding-right: 10px;
 }
 
 .c-form__label {
@@ -205,7 +238,7 @@ body {
   margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
   .c-form__row {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -223,9 +256,6 @@ body {
   margin-top: 1rem;
   font-family: "Quicksand", sans-serif;
   cursor: pointer;
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
 }
 
 .c-form__button:hover {
@@ -236,7 +266,7 @@ body {
   font-size: 1.4rem;
 }
 
-.c-form__group__checkbox {
+.c-form__group--checkbox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -245,11 +275,25 @@ body {
           align-items: center;
 }
 
+.c-form__checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .c-form__input--checkbox {
   width: auto;
+  margin: 0;
 }
 
 .c-form__label--checkbox {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=main.css.map */
