@@ -25,6 +25,8 @@
   font-size: 1.6rem;
   font-family: $font-primary;
   margin-bottom: 1rem;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 .c-form__input:focus {
   &:focus {
