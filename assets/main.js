@@ -1,5 +1,7 @@
 const element = document.querySelector('.c-form__select');
 const button = document.querySelector('.c-form__button');
+const form = document.querySelector('.c-form');
+const success = document.querySelector('.c-form__success');
 
 //Choice JS --- Custom Select Dropdown for State ----- //
 const choices = new Choices(element, {
@@ -38,6 +40,8 @@ const choices = new Choices(element, {
   });
 
   //Form Button Submit ----- //
-  button.addEventListener('submit', function(e) {
+  form.addEventListener('submit', function(e) {
     e.preventDefault();
+    form.style.display = 'none';
+    success.style.display = 'flex';
   });

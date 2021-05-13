@@ -87,6 +87,7 @@ html {
 
 body {
   background: linear-gradient(217deg, #651b7f, #737ac0 70.71%), linear-gradient(127deg, #2596be, #125e9e 70.71%);
+  font-family: "Quicksand", sans-serif;
 }
 
 .c-container {
@@ -156,11 +157,20 @@ body {
   }
 }
 
+.c-form__wrapper {
+  background: #ffffff;
+  padding: 3rem;
+  height: 85%;
+}
+
+@media only screen and (max-width: 768px) {
+  .c-form__wrapper {
+    height: 100%;
+  }
+}
+
 .c-form {
   width: 100%;
-  background: #ffffff;
-  height: 85%;
-  padding: 3rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -172,12 +182,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-@media only screen and (max-width: 768px) {
-  .c-form {
-    height: 100%;
-  }
 }
 
 .c-form__content {
@@ -309,5 +313,34 @@ body {
 .c-form__radio {
   font-size: 1.4rem;
   font-family: "Quicksand", sans-serif;
+}
+
+.c-form__success {
+  display: none;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.c-form__success--heading {
+  font-size: 3rem;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 1rem;
+}
+
+.c-form__success--text {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

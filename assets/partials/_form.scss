@@ -1,15 +1,17 @@
+.c-form__wrapper {
+  background: $color-white;
+  padding: 3rem;
+  height: 85%;
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+  }
+}
 .c-form {
   width: 100%;
-  background: $color-white;
-  height: 85%;
-  padding: 3rem;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  @media only screen and (max-width: 768px) {
-    height: 100%;
-  }
 }
 .c-form__content {
   padding-bottom: 3rem;
@@ -109,4 +111,24 @@
 .c-form__radio {
   font-size: 1.4rem;
   font-family: $font-primary;
+}
+// Success Box ---------- //
+.c-form__success {
+  display: none;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.c-form__success--heading {
+  font-size: 3rem;
+  font-family: $font-secondary;
+  margin-bottom: 1rem;
+}
+.c-form__success--text {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
 }

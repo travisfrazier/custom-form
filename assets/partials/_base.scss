@@ -1,3 +1,4 @@
+//Setting font size to this allows 1rem to = 10px
 html {
   font-size: 62.5%;
 }
@@ -5,6 +6,7 @@ html {
 body {
   background: linear-gradient(217deg, $color-primary, $color-primary-acc 70.71%),
     linear-gradient(127deg, $color-secondary, $color-secondary-acc 70.71%);
+  font-family: $font-primary;
 }
 
 .c-container {
